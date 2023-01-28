@@ -1,15 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonUiModule } from '@welcome/common-ui';
 
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './app.routes';
+import { CommonUiModule } from '@welcome/common-ui';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
+  declarations: [
+    AppComponent,
+    NxWelcomeComponent,
+    CommonUiModule,
+  ],
   imports: [
     BrowserModule,
-    CommonUiModule,
+    RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [],
   bootstrap: [AppComponent],
