@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row" [formGroup]="sortForm">
+  <mat-radio-group aria-label="Sort option" formControlName="sortType" value="ascending">
+    <mat-radio-button value="ascending">Ascending</mat-radio-button>
+    <mat-radio-button value="descending">Descending</mat-radio-button>
+  </mat-radio-group>
+</div>
+  <div class="editor-container" #editorContainer></div>
+  <div class="result-container">
+    <button mat-raised-button (click)="sortJSON()">Sort keys</button>
+  </div>
+</div>
