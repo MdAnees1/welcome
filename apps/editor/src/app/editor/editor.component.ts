@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MonacoEditorService } from '@welcome/common-ui';
@@ -18,8 +19,8 @@ export class EditorComponent implements AfterViewInit, OnInit {
     scrollBeyondLastLine: false,
     readOnly: false,
     theme: 'vs-dark',
+    folding: true,
   };
-  // new FormControl(['ascending', Validators.required]);
   @ViewChild('editorContainer', { static: true }) _editorContainer!: ElementRef;
   sortForm: FormGroup;
 
