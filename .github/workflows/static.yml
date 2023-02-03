@@ -30,11 +30,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
       - name: Nrwl Nx
-  # You may pin to the exact commit or the version.
-  # uses: MansaGroup/nrwl-nx-action@3cd1b0217bc6bec52e5f52f05fefabc8c1076a4a
+      # You may pin to the exact commit or the version.
+      # uses: MansaGroup/nrwl-nx-action@3cd1b0217bc6bec52e5f52f05fefabc8c1076a4a
         uses: MansaGroup/nrwl-nx-action@v3.2.2
         with:
           # Comma-separated list of targets to execute
@@ -53,6 +51,9 @@ jobs:
           nxCloud: false
           # Path to the Nx workspace, needed if not the repository root
           # workingDirectory: # optional
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
