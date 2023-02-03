@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, isDevMode } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Injectable()
@@ -19,7 +19,7 @@ export class MonacoEditorService {
   public load() {
     // load the assets
 
-    const baseUrl = '/assets' + '/monaco-editor/min/vs';
+    const baseUrl = `${(isDevMode() ?  '.': '/welcome/')}/assets/monaco-editor/min/vs`;
 
     if (typeof (<any>window).monaco === 'object') {
       this.finishLoading();
