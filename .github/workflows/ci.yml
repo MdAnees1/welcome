@@ -60,14 +60,14 @@ jobs:
         with:
           path: node_modules
           key: cache-node-modules-${{ hashFiles('package-lock.json') }}
-      - run: npm run deploy
-#       - name: Setup Pages
-#         uses: actions/configure-pages@v3.0.2
-#       - name: Upload artifact
-#         uses: actions/upload-pages-artifact@v1
-#         with:
-#           # Upload entire repository
-#           path: './dist/editor'
-#       - name: Deploy to GitHub Pages
-#         id: deployment
-#         uses: actions/deploy-pages@v1    
+      - run: npm run build:editor
+      - name: Setup Pages
+        uses: actions/configure-pages@v3.0.2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: './dist/editor'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1    
