@@ -30,6 +30,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          path: node_modules
+          key: cache-node-modules-${{ hashFiles('package-lock.json') }}
+      - name: npm install
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+        
       - name: Nrwl Nx
       # You may pin to the exact commit or the version.
       # uses: MansaGroup/nrwl-nx-action@3cd1b0217bc6bec52e5f52f05fefabc8c1076a4a
