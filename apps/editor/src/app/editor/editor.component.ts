@@ -69,10 +69,10 @@ export class EditorComponent implements AfterViewInit, OnInit {
   }
   private compareFn = (a: string,b: string)=> {
     if(this.sortForm.get('sortType')?.value === 'descending') {
-      return a > b ? -1: 1;
+      return a.toLowerCase() > b.toLowerCase() ? -1: 1;
     }
     else {
-      return a > b ? 1: -1;
+      return a.toLowerCase() > b.toLowerCase() ? 1: -1;
     }
     }
 }
