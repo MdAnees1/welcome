@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build:editor": "npx nx run editor:build --base-href /editor --deploy-url /editor/",
+    "build:editor": "npx nx run editor:build --base-href /welcome --deploy-url /welcome/",
     "deploy": "npm run build:editor && gh-pages -d dist"
   },
   "private": true,
