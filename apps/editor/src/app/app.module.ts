@@ -9,6 +9,12 @@ import { EditorComponent } from './editor/editor.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { MatMenuModule } from '@angular/material/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [AppComponent, EditorComponent],
   imports: [
@@ -17,7 +23,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonUiModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatIconModule,
     MatRadioModule,
+    MatToolbarModule,
+    HttpClientModule,
+    MatMenuModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,1 +1,13 @@
+<mat-toolbar class="toolbaar">
+  <h2>Sort JSON</h2>
+  <span class="flex-spacer"></span>
+  <button mat-icon-button [mat-menu-trigger-for]="menu">
+    <mat-icon svgIcon="instagram"></mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" class="insta_menu">
+    <button mat-menu-item (click)="openInsta()">
+      <img src="/assets/img/qr.jpg" alt="insta_qr" height="250px" width="250px">
+    </button>
+  </mat-menu>
+</mat-toolbar>
 <router-outlet></router-outlet>
