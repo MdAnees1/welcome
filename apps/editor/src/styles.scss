@@ -6,3 +6,16 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.insta_menu {
+  .mat-mdc-menu-content {
+    padding: 0;
+    button.mdc-list-item {
+      padding: 0;
+      span.mdc-list-item__primary-text {
+        padding: 0;
+        height: 250px;
+      }
+    }
+  }
+}
