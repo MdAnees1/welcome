@@ -7,25 +7,16 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/welcome",
         "index": "apps/welcome/src/index.html",
         "main": "apps/welcome/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/welcome/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/welcome/src/favicon.ico",
-          "apps/welcome/src/assets"
-        ],
-        "styles": [
-          "apps/welcome/src/styles.scss"
-        ],
+        "assets": ["apps/welcome/src/favicon.ico", "apps/welcome/src/assets"],
+        "styles": ["apps/welcome/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -74,22 +65,15 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "apps/welcome/**/*.ts",
-          "apps/welcome/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/welcome/**/*.ts", "apps/welcome/**/*.html"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/welcome/jest.config.ts",
         "passWithNoTests": true
