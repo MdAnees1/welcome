@@ -18,7 +18,7 @@ jobs:
           key: cache-node-modules-${{ hashFiles('package-lock.json') }}
       - name: npm install
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci
+        run: npm ci -f
 
 
 #   distributed-task:
