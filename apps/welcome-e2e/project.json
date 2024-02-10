@@ -5,7 +5,7 @@
   "projectType": "application",
   "targets": {
     "e2e": {
-      "executor": "@nrwl/cypress:cypress",
+      "executor": "@nx/cypress:cypress",
       "options": {
         "cypressConfig": "apps/welcome-e2e/cypress.config.ts",
         "devServerTarget": "welcome:serve:development",
@@ -18,19 +18,10 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
-      "options": {
-        "lintFilePatterns": [
-          "apps/welcome-e2e/**/*.{js,ts}"
-        ]
-      }
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
     }
   },
   "tags": [],
-  "implicitDependencies": [
-    "welcome"
-  ]
+  "implicitDependencies": ["welcome"]
 }
